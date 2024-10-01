@@ -41,7 +41,21 @@ def questao1():
 
 
 ## QUESTÃO 2 ##
-#def questao2():
+def questao2():
+    print("Digite uma palavra ou uma frase para verificarmos quanto caracteres 'A' existem na string");
+    wait(0.3);
+    DADOS = str(input(">> ")).lower();
+    print(f"\nAnalisando a frase:", DADOS);
+    wait(0.8);
+    if 'a' in DADOS:
+        REVIEW = DADOS;
+        x = REVIEW.count('a');
+        print(f"\nA letra 'a' foi encontrada no arquivo, ", x," vezez");
+    else:
+        print(f"A letra 'a' não foi encontrada no arquivo...");
+    kbhit();
+    wait(0.3);
+    cls();
 
 ## QUESTÃO 3 ##
 def questao3():
@@ -72,8 +86,7 @@ kbhit();
 
 # Questão 2
 print("Questão 2 - String 'A'");
-#questao2();
-#print("A letra 'a' apareceu ", RECORRE, " vezes.");
+questao2();
 kbhit();
 cls();
 
