@@ -23,12 +23,11 @@ def questao1():
     NUMBER = int(input(f"Escolha uma numero e verificaremos se ele se encaixa na sequencia de Fibonacci: "));
 
     print(f"Numero escolhido: ", NUMBER);
-    kbhit();
-    cls();
+    wait(0.8);
     while SEQ < NUMBER:
         SEQ = BASE + SOMA;
         print(BASE, " + ", SOMA, " = ", SEQ);
-        wait(0.3);
+        wait(0.5);
         BASE = SOMA;
         SOMA = SEQ;
     
@@ -42,7 +41,7 @@ def questao1():
 
 ## QUESTÃO 2 ##
 def questao2():
-    print("Digite uma palavra ou uma frase para verificarmos quanto caracteres 'A' existem na string");
+    print("\nDigite uma palavra ou uma frase para verificarmos quanto caracteres 'A' existem na string");
     wait(0.3);
     DADOS = str(input(">> ")).lower();
     print(f"\nAnalisando a frase:", DADOS);
@@ -50,7 +49,7 @@ def questao2():
     if 'a' in DADOS:
         REVIEW = DADOS;
         x = REVIEW.count('a');
-        print(f"\nA letra 'a' foi encontrada no arquivo, ", x," vezez");
+        print(f"\nA letra 'a' foi encontrada no arquivo, ", x,"x");
     else:
         print(f"A letra 'a' não foi encontrada no arquivo...");
     kbhit();
@@ -70,7 +69,10 @@ def questao3():
         print(f" "*spc, SOMA);
         spc += 1;
         wait(0.3);
+    
     print("\nFinal do processamento: ", SOMA);
+    kbhit();
+    cls();
 
 ## CODE FLOW ##
 # Limpando terminal para
@@ -82,19 +84,14 @@ print("Questão 1 - Sequencia de Fibonacci");
 kbhit();
 cls();
 questao1();
-kbhit();
 
 # Questão 2
 print("Questão 2 - String 'A'");
 questao2();
-kbhit();
-cls();
 
 # Questão 3
 print("Questão 3 - 'For/While'");
 questao3();
-kbhit();
-cls();
 
 ## QUEBRA DO APLICATIVO ##
 print("Código por Alvaro G. Ribeiro Netto");
